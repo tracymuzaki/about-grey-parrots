@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parrots 🦜</title>
+    <style>
+        .container{
+            background: linear-gradient(to top, #09203f 0%, #537895 100%);
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 20px 60px;
+            border-radius: 20px;
+        }
+        h1{
+            text-align: center;
+            color: #ffffff;
+            font-size: 50px;
+        }
+        h2{
+            color:#ffffff;
+            text-align: center;
+            font-size: 25px;
+            border: 1px solid #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border: 1px solid #ffffff;
+            border-radius: 20px;
+        }
+        p{
+            color: #ffffff;
+            line-height: 1.5;
+            margin: 20px 0 10px;
+        }
+        span{
+            color: #ffa601;
+        }
+        a{
+            color: rgb(255, 204, 111);
+            font-size: 16px;
+            text-decoration:none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        button{
+            display: block;
+            margin: 20px auto;
+            background: #ffa601;
+            color: #02023b;
+            font-size: 25px;
+            text-transform: uppercase;
+            padding: 16px 22px;
+            border: none;
+            border-radius: 6px;
+            box-shadow: 4px 4px 8px rgba(255, 166, 1, 0.22);
+            transition: all 200ms ease-in-out;
+        }
+        button:hover{
+            opacity: 0.9;
+            cursor: pointer;
+        }
+        .first-hr{
+            margin-top: 20px;
+        }
+        .first-paragraph{
+            font-size: 19px;
+            text-align: center;
+            margin: 10px 0 10px;
+        }
+        .second-paragraph{
+            font-size: 19px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I love Parrots </h1>
+        <h2>Especially the <em>African Greys</em></h2>
+        
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/660/original/congo_timneh_parrots.jpg?1693773092" alt="Parrots">
+        <hr class="first-hr">
+        <p class="first-paragraph"><strong>THERE'S MORE TO THIS BIRD THAN MEETS THE EYE</strong></p>
+        <hr>
+        <p class="second-paragraph">There are 25 species of <em>parrot</em> native to Africa, Madagascar and Mauritius, according to the IUCN - with preferred habitats ranging from closed forests to arid zones. <strong>Parrots</strong> are not as diverse or abundant in Africa as in Australasia and the Neotropics. The <span>grey parrot</span> is found in the primary and secondary rainforests of West and Central Africa. There are in fact, two species of <span>grey parrot</span>.</p>
+        <a href="https://africageographic.com/stories/get-to-know-the-grey-parrot/" target="_blank">Get to know the grey parrot</a><br/>
+        <button>🦜Purchase a Parrot</button>
+    </div>
+    <script>
+        function customerDetails(){
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email?");
+            let parrot = prompt("Which parrot do you prefer?");
+            parrot = parrot.toLowerCase().trim();
+            if (parrot==="congo"|| parrot==="timneh") {
+                alert("Hello, " + name + "!" + " That is a great choice. We shall reachout to you via email with further details of the " + parrot + "parrot purchase process.🦜");
+            }else{
+                alert("Hello, " + name + "!" + " 😔Sorry we run out of " + parrot + " parrots. But we shall get back to you via email once " + parrot + " parrots are available. Thank you!");
+            }
+        }
+        let purchaseButton = document.querySelector("button");
+        purchaseButton.addEventListener("click",customerDetails)
+    </script>
+</body>
+</html>
